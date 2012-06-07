@@ -7,9 +7,7 @@ class RbImpedimentsController < RbApplicationController
     status = (result == 0 ? 200 : 400)
     @include_meta = true
 
-    respond_to do |format|
-      format.html { render :partial => "impediment", :object => @impediment, :status => status }
-    end
+    render :partial => "impediment", :object => @impediment, :status => status
   end
 
   def update
@@ -18,9 +16,7 @@ class RbImpedimentsController < RbApplicationController
     status = (result ? 200 : 400)
     @include_meta = true
 
-    respond_to do |format|
-      format.html { render :partial => "impediment", :object => @impediment, :status => status }
-    end
+    render :partial => "impediment", :object => @impediment, :status => status
   end
 
 end
